@@ -17,8 +17,9 @@ int main() {
     }
 	// my tests	
 	{
-		srcml_request request = { "test", "test", "test", "test"};
-		assert(request_filename(request) == "test");
+		srcml_request request = { "test", "test.cpp", "test", "test"};
+		assert(request_filename(request) == "test.cpp");
+		assert(request_language(request, "test.cpp") == "C++");
 	}
     return 0;
 }

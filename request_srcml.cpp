@@ -21,7 +21,7 @@ std::string request_language(const srcml_request& request, const std::string& fi
 
     // TODO: determine the proper filename from the request
     std::string language;
-
+	language = get_language_from_filename(filename);
     return language;
 }
 
